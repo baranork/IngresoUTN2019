@@ -2,6 +2,6 @@
 y luego mostrarlo por 'alert' al presionar el botón  'MOSTRAR'*/
 function Mostrar()
 {
-	
+   
 }
 
