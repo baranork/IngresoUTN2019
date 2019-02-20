@@ -1,7 +1,11 @@
 function Mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10
-	var num = Math.floor(Math.random() * (10 - 1) + 1);
+	//Genero el número RANDOM entre 1 y 10 
+	
+var number
 
-  alert(num);
+number = Math.round(Math.random() * 10);
+
+alert(number);
+
 }//FIN DE LA FUNCIÓN
