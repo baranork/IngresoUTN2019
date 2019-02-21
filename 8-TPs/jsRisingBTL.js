@@ -9,5 +9,13 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+ var edad
+
+ edad = parseInt(prompt("Ingrese su edad (Entre 18 y 90 años)"))
+
+ while( !(edad > 18 && edad < 90) ){
+     edad = parseInt(prompt("Edad inválida. Ingrese su edad (Entre 18 y 90 años)"))
+ }
+ document.getElementById("Edad").value = edad;
+
 }

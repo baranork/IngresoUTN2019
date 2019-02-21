@@ -23,36 +23,27 @@ function CalcularPrecio ()
 
   //Saco descuentos
 
-   if (cantlampara >= 6 ){
-     descuento = lampara * 50 / 100;
-   }
-   else if (cantlampara === 5 ){
-     if (marca === "ArgentinaLuz"){
-       descuento = lampara * 40 / 100;
-     }
-     else {
-       descuento = lampara * 30 /100;
-     }
-   }
-   else if (cantlampara === 4){
-     if (marca === "ArgentinaLuz" || marca === "FelipeLamparas"){
-       descuento = lampara * 25 / 100;
-     }
-     else {
-       descuento = lampara * 20 / 100;
-     }
-   }
-   else if (cantlampara === 3){
-     if (marca === "ArgentinaLuz" || marca === "FelipeLamparas"){
-       descuento = lampara * 10 /100;
-     }
-     else {
-       descuento = lampara * 5 / 100
-     }
-   }
-   else{
-     descuento = 0;
-   }
+  switch(cantlampara){
+    case 1:
+    case 2:
+    descuento = 0
+    break;
+    case 3:
+    if (marca === "ArgentinaLuz" || marca === "FelipeLamparas"){
+       descuento = lampara * 10 /100;}
+    break;
+    case 4:
+    if (marca === "ArgentinaLuz" || marca === "FelipeLamparas"){
+       descuento = lampara * 25 / 100;}
+    break;
+    case 5:
+    if (marca === "ArgentinaLuz"){
+       descuento = lampara * 40 / 100;}
+    break;
+    default:
+    descuento = lampara * 50 / 100;   
+  }  
+ 
 
   // Aplico descuentos y devuelvo precio individual con descuento
 
